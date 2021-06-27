@@ -2,6 +2,7 @@ package main
 
 import(
   "fmt"
+  "runtime"
 )
 
 func Sum(x int, y int) int {
@@ -9,5 +10,8 @@ func Sum(x int, y int) int {
 }
 
 func main() {
-  fmt.Println(fmt.Sprintf("Hello World, 5+5 is %d", Sum(5, 5)))
+  fmt.Printf("Go version: %s\n", runtime.Version())
+	fmt.Printf("GOOS: %s\n", runtime.GOOS)
+	fmt.Printf("GOARCH: %s\n", runtime.GOARCH)
+  fmt.Printf("Hello World, 5+5 is %d\n", Sum(5, 5))
 }
